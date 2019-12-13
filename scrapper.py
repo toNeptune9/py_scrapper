@@ -24,7 +24,7 @@ if __name__ == "__main__":
         sys.exit()
     valid = re.compile('https://www.milwaukeetool.com/Products')
     if not valid.search(input_user):
-        print ("Can't to scrap this link. Exit")
+        print ("Can't scrap this link. Exit")
         sys.exit()        
     resp = req.get(input_user)
     sp = BeautifulSoup(resp.text,'lxml')
